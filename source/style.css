@@ -7,7 +7,7 @@
   --bg-soft: #f8f8f6;
   --footer: #2f2f2f;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  --container: 1180px;
+  --container: 80%;
 }
 
 * {
@@ -196,6 +196,26 @@ textarea {
   transform: translateY(1px);
 }
 
+.nav-flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 12px;
+  background: #da251d;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04);
+  transform: translateY(1px);
+  position: relative;
+}
+
+.nav-flag::before {
+  content: "★";
+  color: #ffde00;
+  font-size: 8px;
+  line-height: 1;
+}
+
 .nav-links .nav-link.active,
 .nav-links .nav-link:hover {
   background: var(--green);
@@ -274,6 +294,15 @@ textarea {
   line-height: 1.95;
 }
 
+.about-gallery {
+  align-items: start;
+  justify-content: flex-end;
+}
+
+.about-gallery > div {
+  display: flex;
+}
+
 .about-gallery__large,
 .about-gallery__small {
   width: 100%;
@@ -282,11 +311,13 @@ textarea {
 }
 
 .about-gallery__large {
-  height: 372px;
+  height: 420px;
+  margin-top: 88px;
 }
 
 .about-gallery__small {
-  height: 468px;
+  height: 420px;
+  margin-top: 0;
 }
 
 .section--golf {
@@ -698,8 +729,21 @@ textarea {
     line-height: 1.85;
   }
 
+  .about-gallery {
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  .about-gallery > div {
+    display: block;
+  }
+
   .about-gallery__large,
-  .about-gallery__small,
+  .about-gallery__small {
+    height: auto;
+    margin-top: 0;
+  }
+
   .service-card img,
   .news-card img {
     height: auto;
